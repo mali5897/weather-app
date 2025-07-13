@@ -1,38 +1,114 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f0f2f5; /* Light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .App {
   text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 500px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.weather-app h1 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 2.2em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 30px;
+}
+
+.city-input {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 70%;
+  margin-right: 10px;
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.city-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.search-button {
+  padding: 12px 20px;
+  background-color: #007bff;
   color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.search-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading, .error-message {
+  margin-top: 20px;
+  font-size: 1.1em;
+  color: #555;
+}
+
+.error-message {
+  color: #dc3545; /* Red for errors */
+  font-weight: bold;
+}
+
+.weather-display {
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.weather-display h2 {
+  color: #28a745; /* Green for city name */
+  margin-bottom: 15px;
+  font-size: 1.8em;
+}
+
+.weather-info p {
+  margin: 8px 0;
+  font-size: 1.1em;
+  color: #444;
+}
+
+.temperature {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #007bff; /* Blue for temperature */
+}
+
+.description {
+  text-transform: capitalize; /* Capitalize the first letter of the description */
+}
+
+.weather-icon {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
 }
